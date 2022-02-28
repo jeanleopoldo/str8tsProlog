@@ -1,10 +1,11 @@
 % all cells in row/col must be different
+
 diff([X]).
-diff([X,Y|Tail]) :- X \== Y, diff([X|Tail]), diff([Y|Tail]).
+diff([X,Y|Tail]) :- n(X), n(Y), X \== Y, diff([X|Tail]), diff([Y|Tail]).
 
 % rule to check if a list is sequential
 sequential([X]).
-sequential([X, Y|Tail]) :- Y is X+1, sequential([Y|Tail]).
+sequential([X, Y|Tail]) :- n(X), n(Y), Y is X+1, sequential([Y|Tail]).
 
 % function to print grid
 print(A,B,C,D,E,F) :- write(' '), write(A),
@@ -21,6 +22,7 @@ n(3).
 n(4).
 n(5).
 n(6).
+max(6). 
 
 solve(Tab) :-
     Grid = 
@@ -35,15 +37,15 @@ solve(Tab) :-
     
     % row
     R1 = [X12,X13],
-    diff(R1),
-    sequential(R1),
+    diff([X12,X13]),
+    sequential([X12,X13]),
 
     R2 = [X22,X23,X24,5,X26],
-    diff(R2),
-    sequential(R2),
+    diff([X22,X23,X24,5,X26]),
+    % sequential(R2),
 
     R3 = [X32,1,X34,X35,X36],
-    diff(R3),
+    diff([X32,1,X34,X35,X36]),
 
     R4 = [4,X42,X43,X44,X45],
     diff(R4),
@@ -53,10 +55,12 @@ solve(Tab) :-
     
     R6 = [X64,1],
     diff(R6),
+    sequential([X64,1]),
 
     % col
     C1 = [4,X51],
-    diff(C1),
+    diff([4,X51]),
+    sequential([4,X51]),
 
     C2 = [X12,X22,X32,X42,6],
     diff(C2),
@@ -70,8 +74,8 @@ solve(Tab) :-
     C5 = [5,X35,X45,X55,1],
     diff(C5),
 
-    C6 = [[X26,X36]],
-    diff(C6),
+    C6 = [X26,X36],
+    sequential([X26,X36]),
     
     
     print(X11,X12,X13,X14,X15,X16),
