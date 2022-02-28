@@ -7,12 +7,18 @@ This is [Str8ts](https://www.janko.at/Raetsel/Straights/index.htm) solver using 
 ## Usage
 - the grid is set stactically in the code
 - the solver are only able to solve grids nXn
-- for each chunk of lines that are to be changed, then the old must be removed and a new one is to be need
+- for each chunk - _list_ - of lines that are to be changed
+    - the old must be removed
+    - a new one is to be need
+    - the rules must be set to this new chunk of line
+        - diff(Chunk)
+        - sort(Chunk) - this one needs to be implemented
+        - sequential(Chunk)
 - empty cells must be represented as a unique variable. For convention, it is represented by _Xij_, where
     - X must be a capital letter
     - i is the row
     - j is the column
-- static cells are represented by _-1_
+- static cells are represented by _-1_ (although it can assume any integer _k_ such as k <= -1 _and_ k > n)
 
 ## How to run
 - there is a script in ./scripts/run.sh. You just need to run `./scripts/run.sh`
@@ -20,3 +26,6 @@ This is [Str8ts](https://www.janko.at/Raetsel/Straights/index.htm) solver using 
 
 ## Issues
 - there still needs to be implemented a function that sorts a list. This is needed to check if a list contains elements that forms a sequence, i.e., given a list L = [3,5,4], to check if L has sequential elements
+
+## Output
+- the result will be shown in the console of wherever you are executing
