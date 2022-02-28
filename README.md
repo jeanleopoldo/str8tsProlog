@@ -22,6 +22,7 @@ This is [Str8ts](https://www.janko.at/Raetsel/Straights/index.htm) solver using 
 
 ## How to run
 - there is a script in ./scripts/run.sh. You just need to run `./scripts/run.sh`
+- in the consele, type `solve(X).`
 - scripts are meant to linux only
 
 ## Issues
