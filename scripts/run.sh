@@ -7,7 +7,7 @@ cd $PROJECT_PATH
 
 rm -rf program
 
-swipl -o $PROGRAM -c $1
+swipl -o $PROGRAM -c str8ts.pl
 ./$PROGRAM
 
 rm -rf program
