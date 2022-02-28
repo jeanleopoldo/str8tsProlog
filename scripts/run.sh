@@ -5,9 +5,9 @@ PROGRAM='program'
 
 cd $PROJECT_PATH
 
-rm -rf program
+rm -rf $PROGRAM
 
-swipl -o $PROGRAM -c str8ts.pl
+swipl -o $PROGRAM -c $1.pl
 ./$PROGRAM
 
-rm -rf program
+rm -rf $PROGRAM
