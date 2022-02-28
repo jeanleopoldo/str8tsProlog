@@ -18,7 +18,7 @@ This is [Str8ts](https://www.janko.at/Raetsel/Straights/index.htm) solver using 
     - X must be a capital letter
     - i is the row
     - j is the column
-- static cells are represented by _-1_ (although it can assume any integer _k_ such as k <= -1 _and_ k > n)
+- static cells are represented by _-1_ (although it can assume any integer _k_ such as k <= -1 _or_ k > n)
 
 ## How to run
 - there is a script in ./scripts/run.sh. You just need to run `./scripts/run.sh`
