@@ -28,4 +28,4 @@ This is [Str8ts](https://www.janko.at/Raetsel/Straights/index.htm) solver using 
 - there still needs to be implemented a function that sorts a list. This is needed to check if a list contains elements that forms a sequence, i.e., given a list L = [3,5,4], to check if L has sequential elements
 
 ## Output
-- the result will be shown in the console of wherever you are executing
+- the result will be shown in the console of whatever (_IDE, terminal, etc._), you are executing
