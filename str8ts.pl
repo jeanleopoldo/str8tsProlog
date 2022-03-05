@@ -7,7 +7,7 @@ diff([X,Y|Tail]) :- n(X), n(Y), X \== Y, diff([X|Tail]), diff([Y|Tail]).
 sequential([X]).
 sequential([X, Y|Tail]) :- n(X), n(Y), Y is X+1, sequential([Y|Tail]).
 
-% check is an element is part of the list
+% check if an element is part of the list
 is_a_member(A, [A | _]).  
 is_a_member(A, [_ | S]) :- is_a_member(A, S).
 
@@ -15,7 +15,7 @@ is_a_member(A, [_ | S]) :- is_a_member(A, S).
 sequential([X]).
 sequential([X, Y|Tail]) :- Z is X+1, is_a_member(Z,[Y|Tail]); J is X-1, is_a_member(J, [Y|Tail]).
 
-% function to print grid
+% 'function' to print grid
 print(A,B,C,D,E,F) :- write(' '), write(A),
                       write(' '), write(B),
                       write(' '), write(C),
