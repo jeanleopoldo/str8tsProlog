@@ -41,15 +41,15 @@ solve(Tab) :-
     
     % row
     R1 = [X12,X13],
-    diff([X12,X13]),
+    diff(R1),
     sequential(R1),
 
     R2 = [X22,X23,X24,5,X26],
-    diff([X22,X23,X24,5,X26]),
+    diff(R2),
     sequential(R2),
 
     R3 = [X32,1,X34,X35,X36],
-    diff([X32,1,X34,X35,X36]),
+    diff(R3),
     sequential(R3),
 
     R4 = [4,X42,X43,X44,X45],
@@ -66,7 +66,7 @@ solve(Tab) :-
 
     % col
     C1 = [4,X51],
-    diff([4,X51]),
+    diff(C1),
     sequential(C1),
 
     C2 = [X12,X22,X32,X42,6],
