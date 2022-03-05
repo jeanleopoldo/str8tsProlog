@@ -19,12 +19,13 @@ This is [Str8ts](https://www.janko.at/Raetsel/Straights/index.htm) solver using 
     - i is the row
     - j is the column
 - static cells are represented by _-1_ (although it can assume any integer _k_ such as k <= -1 _or_ k > n)
-- currently, it only finds sequence from 1 to _n_, with _n_ being the size of the grid (in this case, 6). It can be changed adding/removing `n(y).`, where y is the number one want to add. It is highly recommended that the range of numbers to be at least 1 to _n_
+- currently, it only finds sequence from 1 to _n_, with _n_ being the size of the grid (in this case, 6)
+- numbers can be changed adding/removing `n(y).` rule, where _y_ is the number one want to add/remove. It is highly recommended the range of numbers to be at least 1 to _n_, also _n_ being the size of the grid
 
 ## How to run
 - there is a script in ./scripts/run.sh. You just need to run `./scripts/run.sh`
-- in the consele, type `solve(X).`
-- scripts are meant to linux only
+- in the console, type `solve(X).`
+- scripts are meant to be used on linux only
 
 ## Output
-- the result will be shown in the console of whatever (_IDE, terminal, etc._), you are executing
+- the result will be shown in the console from whatever (_IDE, terminal, etc._) you are executing
