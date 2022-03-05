@@ -3,10 +3,6 @@
 diff([X]).
 diff([X,Y|Tail]) :- n(X), n(Y), X \== Y, diff([X|Tail]), diff([Y|Tail]).
 
-% rule to check if a list is sequential
-sequential([X]).
-sequential([X, Y|Tail]) :- n(X), n(Y), Y is X+1, sequential([Y|Tail]).
-
 % check if an element is part of the list
 is_a_member(A, [A | _]).  
 is_a_member(A, [_ | S]) :- is_a_member(A, S).
