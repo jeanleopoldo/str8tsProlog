@@ -4,8 +4,8 @@ diff([X]).
 diff([X,Y|Tail]) :- n(X), n(Y), X \== Y, diff([X|Tail]), diff([Y|Tail]).
 
 % check if an element is part of the list
-is_a_member(A, [A | _]).  
-is_a_member(A, [_ | S]) :- is_a_member(A, S).
+is_a_member(X, [X|_]).  
+is_a_member(X, [_|Tail]) :- is_a_member(X, Tail).
 
 % check if a list has sequential elements
 sequential([X]).
